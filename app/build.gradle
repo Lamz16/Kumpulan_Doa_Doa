@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    namespace 'com.lamz.kumpulandoadoa'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.lamz.kumpulandoadoa"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dynamicFeatures = [':bookmark']
+}
+
+dependencies {
+    implementation project(':app_core')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation ("de.hdodenhof:circleimageview:$circle_image_version")
+    implementation ("androidx.activity:activity-ktx:$activity_version")
+    implementation ("androidx.fragment:fragment-ktx:$fragment_version")
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_livedata_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viewmodel_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_fragment_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_ui_version"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+}

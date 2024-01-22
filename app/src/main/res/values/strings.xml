@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kumpulan Doa Doa</string>
+    <string name="title_home">Home</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="title_about">About Us</string>
+    <string name="ayat_latin">Bismikallaahumma ahyaa wa ammuut</string>
+    <string name="artinya">Segala puji bagi Allah yang telah menghidupkan kami sesudah kami mati (membangunkan dari tidur) dan hanya kepada-Nya kami dikembalikan</string>
+    <string name="artinya_detail">Artinya :</string>
+    <string name="kesalahan">Terjadi Kesalahan, periksa jaringan anda</string>
+    <string name="kosong">Bookmark Masih Kosong</string>
+    <string name="doa_doa_harian">Doa Doa Harian</string>
+    <string name="title_splash">Kumpulan</string>
+</resources>
