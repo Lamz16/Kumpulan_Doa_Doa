@@ -84,3 +84,17 @@
  -keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
 
  -keep class com.lamz.core.data.resource.remote.response.ListItemKumpulanDoaResponse { <fields>; }
+ -keep class org.koin.** { *; }
+ -keepclassmembers class * {
+     @org.koin.core.annotation.* <methods>;
+ }
+ -keepclassmembers class * {
+     @org.koin.core.annotation.* <fields>;
+ }
+ -keepattributes Signature
+ -keepattributes *Annotation*
+
+-keep class com.lamz.core.di.** { *; }
+-keepclassmembers class com.lamz.core.di.** { *; }
+
+

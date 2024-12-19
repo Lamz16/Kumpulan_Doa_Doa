@@ -29,9 +29,22 @@ class AboutUsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val webView = binding.webView
+
+        // Aktifkan JavaScript
         webView.settings.javaScriptEnabled = true
+
+        // Sesuaikan konten dengan layar
+        webView.settings.loadWithOverviewMode = true
+        webView.settings.useWideViewPort = true
+
+        // Tambahkan pengaturan zoom jika diperlukan
+        webView.settings.builtInZoomControls = true
+        webView.settings.displayZoomControls = false
+
+        // Muat URL
         webView.loadUrl("https://github.com/Lamz16")
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

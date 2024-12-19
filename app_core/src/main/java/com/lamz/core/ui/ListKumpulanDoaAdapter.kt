@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.lamz.core.R
@@ -11,6 +12,7 @@ import com.lamz.core.databinding.ListItemDoaBinding
 import com.lamz.core.domain.model.KumpulanDoaDoa
 
 @Suppress("unused")
+@Keep
 class ListKumpulanDoaAdapter(private val onFavoriteClick : (KumpulanDoaDoa)->Unit) : RecyclerView.Adapter<ListKumpulanDoaAdapter.ListViewHolder>() {
 
 
